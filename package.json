@@ -1,0 +1,20 @@
+{
+  "name": "swagger-codegen-cli-demo",
+  "version": "1.0.0",
+  "description": "api",
+  "main": "index.js",
+  "scripts": {
+    "swagger-codegen-cli-demo": "echo \"hello\" ",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/general252/swagger-codegen-cli-demo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/general252/swagger-codegen-cli-demo/issues"
+  },
+  "homepage": "https://github.com/general252/swagger-codegen-cli-demo#readme"
+}
