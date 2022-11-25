@@ -32,3 +32,14 @@ Options:
 ```
 $ npx ssapi -i swagger.json -o my_services
 ```
+
+
+tsconfig.json
+```
+{
+  "compilerOptions": {
+    "preserveValueImports": false,
+    "importsNotUsedAsValues": "preserve"
+  }
+}
+```
