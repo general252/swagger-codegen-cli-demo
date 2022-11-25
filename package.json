@@ -1,6 +1,6 @@
 {
   "name": "swagger-codegen-cli-demo",
-  "version": "1.0.18",
+  "version": "1.0.19",
   "description": "api",
   "main": "index.js",
   "bin": {
@@ -8,6 +8,9 @@
   },
   "scripts": {
     "swagger-codegen-cli-demo": "echo \"hello\" "
+  },
+  "dependencies": {
+    "commander": "^9.4.1"
   },
   "repository": {
     "type": "git",
