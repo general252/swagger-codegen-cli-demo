@@ -1,14 +1,13 @@
 {
   "name": "swagger-codegen-cli-demo",
-  "version": "1.0.5",
+  "version": "1.0.7",
   "description": "api",
   "main": "index.js",
   "bin": {
-    "scli": "./main.js"
+    "sapi": "./main.js"
   },
   "scripts": {
-    "swagger-codegen-cli-demo": "echo \"hello\" ",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "swagger-codegen-cli-demo": "echo \"hello\" "
   },
   "repository": {
     "type": "git",
