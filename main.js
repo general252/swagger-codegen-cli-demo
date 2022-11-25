@@ -8,6 +8,7 @@ const { Command } = require('commander');
 
 var program = new Command();
 program
+    .version(require('../package.json').version)
     .option('-i, --input <type>', 'location of  the  swagger  spec,  as  URL  or file', 'https://petstore.swagger.io/v2/swagger.json')
     .option('-o, --output <type>', 'where to write  the  generated  files(current dir by default)', 'services')
     .option('-t, --template <type>', 'folder containing the template files', 'template/typescript-axios-custom')
@@ -60,7 +61,6 @@ console.log({
     template: templatePath,
 });
 
-
 var cmd = `java -jar ${JarFilePath} generate -i ${inputPath} -t "${templatePath}" --lang ${lang} -o "${outputPath}"`;
 
 console.log(cmd);
@@ -80,7 +80,22 @@ if (true) {
             console.error(`stderr: ${stderr}`);
         }
     });
+
+    var packetFilePath = path.join(outputPath, "package.json");
+    console.log('delete package.json, ', packetFilePath);
+
+    fs.rm(packetFilePath, (error, stdout, stderr) => {
+        if (error) {
+            console.error(`exec error: ${error}`);
+            return;
+        }
+
+        if (stdout) {
+            console.log(`stdout: ${stdout}`);
+        }
+
+        if (stderr) {
+            console.error(`stderr: ${stderr}`);
+        }
+    });
 }
-
-
-
