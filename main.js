@@ -27,7 +27,9 @@ var lang = options.lang;
 
 if (inputPath.indexOf("http") == 0) {
 } else {
-    inputPath = path.join(process.cwd(), inputPath);
+    if (fs.existsSync(inputPath) == false) {
+        inputPath = path.join(process.cwd(), inputPath);
+    }
 
     if (fs.existsSync(inputPath) == false) {
         console.error(`###### [error] input path "${inputPath}" not exists`);
@@ -71,12 +73,12 @@ try {
 
     console.log();
     console.log(msg);
- } catch (error) {
+} catch (error) {
     console.log("status: ", error.status);  // 0 : successful exit, but here in exception it has to be greater than 0
     console.log("message: ", error.message); // Holds the message you typically want.
     console.log("stderr: ", error.stderr);  // Holds the stderr output. Use `.toString()`.
     console.log("stdout: ", error.stdout);  // Holds the stdout output. Use `.toString()`.
- }
+}
 
 var packetFilePath = path.join(outputPath, "package.json");
 if (fs.existsSync(packetFilePath)) {

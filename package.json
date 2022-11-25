@@ -1,6 +1,6 @@
 {
   "name": "swagger-codegen-cli-demo",
-  "version": "1.0.19",
+  "version": "1.0.20",
   "description": "api",
   "main": "index.js",
   "bin": {
