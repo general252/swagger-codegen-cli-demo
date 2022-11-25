@@ -2,13 +2,15 @@
 /* eslint-disable */
 {{>licenseInfo}}
 
-import globalAxios, { AxiosResponse, AxiosInstance, AxiosRequestConfig } from 'axios';
-import { Configuration } from '{{apiRelativeToRoot}}configuration';
+import globalAxios from 'axios';
+import type { AxiosResponse, AxiosInstance, AxiosRequestConfig } from 'axios';
+import type { Configuration } from '{{apiRelativeToRoot}}configuration';
 // Some imports not used depending on template conditions
 // @ts-ignore
-import { BASE_PATH, COLLECTION_FORMATS, RequestArgs, BaseAPI, RequiredError } from '{{apiRelativeToRoot}}base';
+import { BASE_PATH, COLLECTION_FORMATS, BaseAPI, RequiredError } from '{{apiRelativeToRoot}}base';
+import type { RequestArgs } from '{{apiRelativeToRoot}}base';
 {{#imports}}
-import { {{import}} } from '{{apiRelativeToRoot}}{{tsModelPackage}}';
+import type { {{import}} } from '{{apiRelativeToRoot}}{{tsModelPackage}}';
 {{/imports}}
 {{#operations}}
 /**
