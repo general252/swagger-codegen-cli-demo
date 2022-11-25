@@ -7,7 +7,7 @@ import { Configuration } from "./configuration";
 // @ts-ignore
 import globalAxios, { AxiosRequestConfig, AxiosInstance } from 'axios';
 
-export const BASE_PATH = new URL("{{{basePath}}}".replace(/\/+$/, "")).pathname;
+export const BASE_PATH = "{{{basePath}}}".indexOf("http") == 0 ? new URL("{{{basePath}}}".replace(/\/+$/, "")).pathname : "{{{basePath}}}".replace(/\/+$/, "");
 
 /**
  *
