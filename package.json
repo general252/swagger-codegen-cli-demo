@@ -1,13 +1,13 @@
 {
-  "name": "swagger-codegen-cli-demo",
-  "version": "1.0.20",
+  "name": "ssapi",
+  "version": "1.0.22",
   "description": "api",
   "main": "index.js",
   "bin": {
-    "sapi": "./main.js"
+    "ssapi": "./main.js"
   },
   "scripts": {
-    "swagger-codegen-cli-demo": "echo \"hello\" "
+    "ssapi": "echo \"hello\" "
   },
   "dependencies": {
     "commander": "^9.4.1"
