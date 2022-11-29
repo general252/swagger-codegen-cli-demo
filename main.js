@@ -117,7 +117,7 @@ console.log(objectConfig);
 
 // commond
 {
-    var cmd = `java -jar ${objectConfig.jar} generate -i "${objectConfig.input}" -t "${objectConfig.template}" --lang ${objectConfig.lang} -o "${objectConfig.output}" -D modelPropertyNaming=original`;
+    var cmd = `java -jar "${objectConfig.jar}" generate -i "${objectConfig.input}" -t "${objectConfig.template}" --lang ${objectConfig.lang} -o "${objectConfig.output}" -D modelPropertyNaming=original`;
 
     try {
         console.log();
