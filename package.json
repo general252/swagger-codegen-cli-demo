@@ -1,6 +1,6 @@
 {
   "name": "ssapi",
-  "version": "1.0.28",
+  "version": "1.0.30",
   "description": "api",
   "main": "index.js",
   "bin": {
