@@ -8,7 +8,7 @@
 #### [swagger-codegen-cli.jar](https://repo1.maven.org/maven2/io/swagger/codegen/v3/swagger-codegen-cli/)  
 
 
-
+#### 1. 安装
 ```
 $ npm i ssapi
 ```
@@ -29,10 +29,12 @@ Options:
   -h, --help             display help for command
 ```
 
+#### 2. 使用
 ```
-$ npx ssapi -i swagger.json -o my_services
+$ npx ssapi -i swagger.json -o services
 ```
 
+#### 3. 使用配置文件 
 ```
 $ npx ssapi --init
 $ cat ssapi.config.json 
@@ -46,4 +48,19 @@ $ cat ssapi.config.json
 $ npx ssapi -c ssapi.config.json
 ```
 
+#### 4. api调用
+```
+import * as API from "../../services"
+
+let api = new API.DefaultApi();
+api.Hello({
+    Name: "tina",
+}, "").then((response) => {
+    let result = response.data;
+    console.log(result);
+}).catch((err) => {
+
+});
+
+```
 
